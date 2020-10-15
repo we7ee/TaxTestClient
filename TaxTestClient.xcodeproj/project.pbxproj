@@ -15,6 +15,13 @@
 		F8D7FDB625386FE0008073C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D7FDB425386FE0008073C5 /* LaunchScreen.storyboard */; };
 		F8D7FDC125386FE0008073C5 /* TaxTestClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDC025386FE0008073C5 /* TaxTestClientTests.swift */; };
 		F8D7FDCC25386FE0008073C5 /* TaxTestClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDCB25386FE0008073C5 /* TaxTestClientUITests.swift */; };
+		F8D7FDEE25387182008073C5 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDED25387182008073C5 /* EndPointType.swift */; };
+		F8D7FDF6253872A4008073C5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDF5253872A4008073C5 /* HTTPMethod.swift */; };
+		F8D7FDFD25387339008073C5 /* TaxEndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDFC25387339008073C5 /* TaxEndpointType.swift */; };
+		F8D7FE05253873E3008073C5 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE04253873E3008073C5 /* LoginUser.swift */; };
+		F8D7FE1C253985AA008073C5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE1B253985AA008073C5 /* NetworkManager.swift */; };
+		F8D7FE2125398B8D008073C5 /* EndPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE2025398B8D008073C5 /* EndPointTests.swift */; };
+		F8D7FE292539D36A008073C5 /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE282539D36A008073C5 /* NetworkManagerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		F8D7FDC725386FE0008073C5 /* TaxTestClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaxTestClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D7FDCB25386FE0008073C5 /* TaxTestClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxTestClientUITests.swift; sourceTree = "<group>"; };
 		F8D7FDCD25386FE0008073C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8D7FDED25387182008073C5 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		F8D7FDF5253872A4008073C5 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		F8D7FDFC25387339008073C5 /* TaxEndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxEndpointType.swift; sourceTree = "<group>"; };
+		F8D7FE04253873E3008073C5 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
+		F8D7FE1B253985AA008073C5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F8D7FE2025398B8D008073C5 /* EndPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTests.swift; sourceTree = "<group>"; };
+		F8D7FE282539D36A008073C5 /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				F8D7FDC025386FE0008073C5 /* TaxTestClientTests.swift */,
+				F8D7FE2025398B8D008073C5 /* EndPointTests.swift */,
+				F8D7FE282539D36A008073C5 /* NetworkManagerTest.swift */,
 				F8D7FDC225386FE0008073C5 /* Info.plist */,
 			);
 			path = TaxTestClientTests;
@@ -140,6 +156,8 @@
 		F8D7FDE025386FF8008073C5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				F8D7FDFA25387317008073C5 /* Endpoints */,
+				F8D7FDEC25387166008073C5 /* Service */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -174,6 +192,33 @@
 				F8D7FDB225386FE0008073C5 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		F8D7FDEC25387166008073C5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7FDED25387182008073C5 /* EndPointType.swift */,
+				F8D7FDF5253872A4008073C5 /* HTTPMethod.swift */,
+				F8D7FE1B253985AA008073C5 /* NetworkManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		F8D7FDFA25387317008073C5 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7FDFB2538731D008073C5 /* buhl */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		F8D7FDFB2538731D008073C5 /* buhl */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7FDFC25387339008073C5 /* TaxEndpointType.swift */,
+				F8D7FE04253873E3008073C5 /* LoginUser.swift */,
+			);
+			path = buhl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,8 +351,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8D7FE05253873E3008073C5 /* LoginUser.swift in Sources */,
+				F8D7FDEE25387182008073C5 /* EndPointType.swift in Sources */,
 				F8D7FDAE25386FDE008073C5 /* ViewController.swift in Sources */,
 				F8D7FDAA25386FDE008073C5 /* AppDelegate.swift in Sources */,
+				F8D7FE1C253985AA008073C5 /* NetworkManager.swift in Sources */,
+				F8D7FDF6253872A4008073C5 /* HTTPMethod.swift in Sources */,
+				F8D7FDFD25387339008073C5 /* TaxEndpointType.swift in Sources */,
 				F8D7FDAC25386FDE008073C5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +366,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8D7FE292539D36A008073C5 /* NetworkManagerTest.swift in Sources */,
+				F8D7FE2125398B8D008073C5 /* EndPointTests.swift in Sources */,
 				F8D7FDC125386FE0008073C5 /* TaxTestClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
