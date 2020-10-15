@@ -99,13 +99,12 @@
 		F8D7FDA825386FDE008073C5 /* TaxTestClient */ = {
 			isa = PBXGroup;
 			children = (
-				F8D7FDA925386FDE008073C5 /* AppDelegate.swift */,
-				F8D7FDAB25386FDE008073C5 /* SceneDelegate.swift */,
-				F8D7FDAD25386FDE008073C5 /* ViewController.swift */,
-				F8D7FDAF25386FDE008073C5 /* Main.storyboard */,
-				F8D7FDB225386FE0008073C5 /* Assets.xcassets */,
-				F8D7FDB425386FE0008073C5 /* LaunchScreen.storyboard */,
-				F8D7FDB725386FE0008073C5 /* Info.plist */,
+				F8D7FDE42538702C008073C5 /* Assets */,
+				F8D7FDE325387012008073C5 /* Scene */,
+				F8D7FDE22538700A008073C5 /* Controller */,
+				F8D7FDE125387000008073C5 /* Model */,
+				F8D7FDE025386FF8008073C5 /* Networking */,
+				F8D7FDDC25386FE7008073C5 /* Supporting Files */,
 			);
 			path = TaxTestClient;
 			sourceTree = "<group>";
@@ -126,6 +125,55 @@
 				F8D7FDCD25386FE0008073C5 /* Info.plist */,
 			);
 			path = TaxTestClientUITests;
+			sourceTree = "<group>";
+		};
+		F8D7FDDC25386FE7008073C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7FDAB25386FDE008073C5 /* SceneDelegate.swift */,
+				F8D7FDA925386FDE008073C5 /* AppDelegate.swift */,
+				F8D7FDB725386FE0008073C5 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8D7FDE025386FF8008073C5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F8D7FDE125387000008073C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F8D7FDE22538700A008073C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F8D7FDE325387012008073C5 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7FDAD25386FDE008073C5 /* ViewController.swift */,
+				F8D7FDAF25386FDE008073C5 /* Main.storyboard */,
+				F8D7FDB425386FE0008073C5 /* LaunchScreen.storyboard */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		F8D7FDE42538702C008073C5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7FDB225386FE0008073C5 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -438,7 +486,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D44BQW4PJB;
-				INFOPLIST_FILE = TaxTestClient/Info.plist;
+				INFOPLIST_FILE = "TaxTestClient/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +505,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D44BQW4PJB;
-				INFOPLIST_FILE = TaxTestClient/Info.plist;
+				INFOPLIST_FILE = "TaxTestClient/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
