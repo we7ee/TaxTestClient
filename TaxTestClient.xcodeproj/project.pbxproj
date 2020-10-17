@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		F8D7FDAA25386FDE008073C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDA925386FDE008073C5 /* AppDelegate.swift */; };
 		F8D7FDAC25386FDE008073C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDAB25386FDE008073C5 /* SceneDelegate.swift */; };
-		F8D7FDAE25386FDE008073C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDAD25386FDE008073C5 /* ViewController.swift */; };
-		F8D7FDB125386FDE008073C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D7FDAF25386FDE008073C5 /* Main.storyboard */; };
+		F8D7FDAE25386FDE008073C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDAD25386FDE008073C5 /* LoginViewController.swift */; };
+		F8D7FDB125386FDE008073C5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D7FDAF25386FDE008073C5 /* Login.storyboard */; };
 		F8D7FDB325386FE0008073C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D7FDB225386FE0008073C5 /* Assets.xcassets */; };
 		F8D7FDB625386FE0008073C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D7FDB425386FE0008073C5 /* LaunchScreen.storyboard */; };
 		F8D7FDC125386FE0008073C5 /* TaxTestClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDC025386FE0008073C5 /* TaxTestClientTests.swift */; };
@@ -22,6 +22,12 @@
 		F8D7FE1C253985AA008073C5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE1B253985AA008073C5 /* NetworkManager.swift */; };
 		F8D7FE2125398B8D008073C5 /* EndPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE2025398B8D008073C5 /* EndPointTests.swift */; };
 		F8D7FE292539D36A008073C5 /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE282539D36A008073C5 /* NetworkManagerTest.swift */; };
+		F8D7FE38253A0988008073C5 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE37253A0988008073C5 /* Storyboard.swift */; };
+		F8D7FE3E253A0A06008073C5 /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE3D253A0A06008073C5 /* UIStoryboard+Extension.swift */; };
+		F8D7FE4A253A0B10008073C5 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE49253A0B10008073C5 /* StoryboardIdentifiable.swift */; };
+		F8D7FE52253A0B77008073C5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE51253A0B77008073C5 /* Coordinator.swift */; };
+		F8D7FE57253A0C00008073C5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE56253A0C00008073C5 /* MainCoordinator.swift */; };
+		F8D7FE5C253A0DA5008073C5 /* UIViewController+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE5B253A0DA5008073C5 /* UIViewController+StoryboardIdentifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +51,8 @@
 		F8D7FDA625386FDE008073C5 /* TaxTestClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxTestClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D7FDA925386FDE008073C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8D7FDAB25386FDE008073C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F8D7FDAD25386FDE008073C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F8D7FDB025386FDE008073C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F8D7FDAD25386FDE008073C5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F8D7FDB025386FDE008073C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		F8D7FDB225386FE0008073C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8D7FDB525386FE0008073C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8D7FDB725386FE0008073C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +69,12 @@
 		F8D7FE1B253985AA008073C5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F8D7FE2025398B8D008073C5 /* EndPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTests.swift; sourceTree = "<group>"; };
 		F8D7FE282539D36A008073C5 /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
+		F8D7FE37253A0988008073C5 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		F8D7FE3D253A0A06008073C5 /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
+		F8D7FE49253A0B10008073C5 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		F8D7FE51253A0B77008073C5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F8D7FE56253A0C00008073C5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		F8D7FE5B253A0DA5008073C5 /* UIViewController+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +125,8 @@
 		F8D7FDA825386FDE008073C5 /* TaxTestClient */ = {
 			isa = PBXGroup;
 			children = (
+				F8D7FE48253A0AF5008073C5 /* Protocol */,
+				F8D7FE3C253A09E0008073C5 /* Extension */,
 				F8D7FDE42538702C008073C5 /* Assets */,
 				F8D7FDE325387012008073C5 /* Scene */,
 				F8D7FDE22538700A008073C5 /* Controller */,
@@ -179,9 +193,10 @@
 		F8D7FDE325387012008073C5 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				F8D7FDAD25386FDE008073C5 /* ViewController.swift */,
-				F8D7FDAF25386FDE008073C5 /* Main.storyboard */,
+				F8D7FE36253A08CB008073C5 /* Login */,
 				F8D7FDB425386FE0008073C5 /* LaunchScreen.storyboard */,
+				F8D7FE37253A0988008073C5 /* Storyboard.swift */,
+				F8D7FE56253A0C00008073C5 /* MainCoordinator.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -219,6 +234,33 @@
 				F8D7FE04253873E3008073C5 /* LoginUser.swift */,
 			);
 			path = buhl;
+			sourceTree = "<group>";
+		};
+		F8D7FE36253A08CB008073C5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7FDAD25386FDE008073C5 /* LoginViewController.swift */,
+				F8D7FDAF25386FDE008073C5 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F8D7FE3C253A09E0008073C5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7FE3D253A0A06008073C5 /* UIStoryboard+Extension.swift */,
+				F8D7FE5B253A0DA5008073C5 /* UIViewController+StoryboardIdentifiable.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F8D7FE48253A0AF5008073C5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7FE49253A0B10008073C5 /* StoryboardIdentifiable.swift */,
+				F8D7FE51253A0B77008073C5 /* Coordinator.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,7 +368,7 @@
 			files = (
 				F8D7FDB625386FE0008073C5 /* LaunchScreen.storyboard in Resources */,
 				F8D7FDB325386FE0008073C5 /* Assets.xcassets in Resources */,
-				F8D7FDB125386FDE008073C5 /* Main.storyboard in Resources */,
+				F8D7FDB125386FDE008073C5 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,11 +395,17 @@
 			files = (
 				F8D7FE05253873E3008073C5 /* LoginUser.swift in Sources */,
 				F8D7FDEE25387182008073C5 /* EndPointType.swift in Sources */,
-				F8D7FDAE25386FDE008073C5 /* ViewController.swift in Sources */,
+				F8D7FDAE25386FDE008073C5 /* LoginViewController.swift in Sources */,
 				F8D7FDAA25386FDE008073C5 /* AppDelegate.swift in Sources */,
 				F8D7FE1C253985AA008073C5 /* NetworkManager.swift in Sources */,
+				F8D7FE5C253A0DA5008073C5 /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				F8D7FDF6253872A4008073C5 /* HTTPMethod.swift in Sources */,
 				F8D7FDFD25387339008073C5 /* TaxEndpointType.swift in Sources */,
+				F8D7FE38253A0988008073C5 /* Storyboard.swift in Sources */,
+				F8D7FE52253A0B77008073C5 /* Coordinator.swift in Sources */,
+				F8D7FE4A253A0B10008073C5 /* StoryboardIdentifiable.swift in Sources */,
+				F8D7FE57253A0C00008073C5 /* MainCoordinator.swift in Sources */,
+				F8D7FE3E253A0A06008073C5 /* UIStoryboard+Extension.swift in Sources */,
 				F8D7FDAC25386FDE008073C5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,12 +444,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F8D7FDAF25386FDE008073C5 /* Main.storyboard */ = {
+		F8D7FDAF25386FDE008073C5 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F8D7FDB025386FDE008073C5 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		F8D7FDB425386FE0008073C5 /* LaunchScreen.storyboard */ = {
