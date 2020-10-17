@@ -12,8 +12,8 @@ struct LoginUser: TaxEndpointType {
 
     private let requestBody: LoginUserRequestBody
 
-    init(username: String, password: String) {
-        self.requestBody = LoginUserRequestBody(username: username, password: password)
+    init(email: String, password: String) {
+        self.requestBody = LoginUserRequestBody(email: email, password: password)
     }
 
     var path: String {
@@ -40,15 +40,8 @@ struct LoginUser: TaxEndpointType {
 }
 
 struct LoginUserRequestBody: Codable {
-    let username: String
+    let email: String
     let password: String
 }
 
 extension LoginUserRequestBody: Equatable {}
-
-struct LoginUserResponse: Codable {
-    let email: String
-    let userName: String?
-    let userGlobalId: Int
-    let error: String
-}

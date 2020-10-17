@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F837F126253B235D00789C83 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F125253B235D00789C83 /* UIViewController+Alert.swift */; };
+		F837F12B253B26AC00789C83 /* LoginControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F12A253B26AC00789C83 /* LoginControllerTests.swift */; };
+		F837F136253B383500789C83 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F135253B383500789C83 /* URLSessionMock.swift */; };
+		F837F13F253B385700789C83 /* NetworkManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F13E253B385700789C83 /* NetworkManagerMock.swift */; };
 		F8D7FDAA25386FDE008073C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDA925386FDE008073C5 /* AppDelegate.swift */; };
 		F8D7FDAC25386FDE008073C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDAB25386FDE008073C5 /* SceneDelegate.swift */; };
 		F8D7FDAE25386FDE008073C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDAD25386FDE008073C5 /* LoginViewController.swift */; };
 		F8D7FDB125386FDE008073C5 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D7FDAF25386FDE008073C5 /* Login.storyboard */; };
 		F8D7FDB325386FE0008073C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8D7FDB225386FE0008073C5 /* Assets.xcassets */; };
 		F8D7FDB625386FE0008073C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D7FDB425386FE0008073C5 /* LaunchScreen.storyboard */; };
-		F8D7FDC125386FE0008073C5 /* TaxTestClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDC025386FE0008073C5 /* TaxTestClientTests.swift */; };
 		F8D7FDCC25386FE0008073C5 /* TaxTestClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDCB25386FE0008073C5 /* TaxTestClientUITests.swift */; };
 		F8D7FDEE25387182008073C5 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDED25387182008073C5 /* EndPointType.swift */; };
 		F8D7FDF6253872A4008073C5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDF5253872A4008073C5 /* HTTPMethod.swift */; };
@@ -28,6 +31,8 @@
 		F8D7FE52253A0B77008073C5 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE51253A0B77008073C5 /* Coordinator.swift */; };
 		F8D7FE57253A0C00008073C5 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE56253A0C00008073C5 /* MainCoordinator.swift */; };
 		F8D7FE5C253A0DA5008073C5 /* UIViewController+StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE5B253A0DA5008073C5 /* UIViewController+StoryboardIdentifiable.swift */; };
+		F8D7FE61253B0E5C008073C5 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE60253B0E5C008073C5 /* LoginController.swift */; };
+		F8D7FE66253B11A0008073C5 /* LoginUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE65253B11A0008073C5 /* LoginUserResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F837F125253B235D00789C83 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		F837F12A253B26AC00789C83 /* LoginControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerTests.swift; sourceTree = "<group>"; };
+		F837F135253B383500789C83 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		F837F13E253B385700789C83 /* NetworkManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerMock.swift; sourceTree = "<group>"; };
 		F8D7FDA625386FDE008073C5 /* TaxTestClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxTestClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D7FDA925386FDE008073C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8D7FDAB25386FDE008073C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,7 +66,6 @@
 		F8D7FDB525386FE0008073C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F8D7FDB725386FE0008073C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8D7FDBC25386FE0008073C5 /* TaxTestClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaxTestClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8D7FDC025386FE0008073C5 /* TaxTestClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxTestClientTests.swift; sourceTree = "<group>"; };
 		F8D7FDC225386FE0008073C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8D7FDC725386FE0008073C5 /* TaxTestClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaxTestClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D7FDCB25386FE0008073C5 /* TaxTestClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxTestClientUITests.swift; sourceTree = "<group>"; };
@@ -75,6 +83,8 @@
 		F8D7FE51253A0B77008073C5 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		F8D7FE56253A0C00008073C5 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		F8D7FE5B253A0DA5008073C5 /* UIViewController+StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardIdentifiable.swift"; sourceTree = "<group>"; };
+		F8D7FE60253B0E5C008073C5 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		F8D7FE65253B11A0008073C5 /* LoginUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +112,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F837F132253B37F800789C83 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				F837F12A253B26AC00789C83 /* LoginControllerTests.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		F837F133253B380100789C83 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F8D7FE2025398B8D008073C5 /* EndPointTests.swift */,
+				F8D7FE282539D36A008073C5 /* NetworkManagerTest.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F837F134253B381000789C83 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F837F135253B383500789C83 /* URLSessionMock.swift */,
+				F837F13E253B385700789C83 /* NetworkManagerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		F8D7FD9D25386FDE008073C5 = {
 			isa = PBXGroup;
 			children = (
@@ -140,9 +176,9 @@
 		F8D7FDBF25386FE0008073C5 /* TaxTestClientTests */ = {
 			isa = PBXGroup;
 			children = (
-				F8D7FDC025386FE0008073C5 /* TaxTestClientTests.swift */,
-				F8D7FE2025398B8D008073C5 /* EndPointTests.swift */,
-				F8D7FE282539D36A008073C5 /* NetworkManagerTest.swift */,
+				F837F134253B381000789C83 /* Mocks */,
+				F837F133253B380100789C83 /* Network */,
+				F837F132253B37F800789C83 /* Scene */,
 				F8D7FDC225386FE0008073C5 /* Info.plist */,
 			);
 			path = TaxTestClientTests;
@@ -179,6 +215,7 @@
 		F8D7FDE125387000008073C5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F8D7FE65253B11A0008073C5 /* LoginUserResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,9 +230,9 @@
 		F8D7FDE325387012008073C5 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				F8D7FE37253A0988008073C5 /* Storyboard.swift */,
 				F8D7FE36253A08CB008073C5 /* Login */,
 				F8D7FDB425386FE0008073C5 /* LaunchScreen.storyboard */,
-				F8D7FE37253A0988008073C5 /* Storyboard.swift */,
 				F8D7FE56253A0C00008073C5 /* MainCoordinator.swift */,
 			);
 			path = Scene;
@@ -241,6 +278,7 @@
 			children = (
 				F8D7FDAD25386FDE008073C5 /* LoginViewController.swift */,
 				F8D7FDAF25386FDE008073C5 /* Login.storyboard */,
+				F8D7FE60253B0E5C008073C5 /* LoginController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -250,6 +288,7 @@
 			children = (
 				F8D7FE3D253A0A06008073C5 /* UIStoryboard+Extension.swift */,
 				F8D7FE5B253A0DA5008073C5 /* UIViewController+StoryboardIdentifiable.swift */,
+				F837F125253B235D00789C83 /* UIViewController+Alert.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -396,11 +435,14 @@
 				F8D7FE05253873E3008073C5 /* LoginUser.swift in Sources */,
 				F8D7FDEE25387182008073C5 /* EndPointType.swift in Sources */,
 				F8D7FDAE25386FDE008073C5 /* LoginViewController.swift in Sources */,
+				F837F126253B235D00789C83 /* UIViewController+Alert.swift in Sources */,
 				F8D7FDAA25386FDE008073C5 /* AppDelegate.swift in Sources */,
+				F8D7FE61253B0E5C008073C5 /* LoginController.swift in Sources */,
 				F8D7FE1C253985AA008073C5 /* NetworkManager.swift in Sources */,
 				F8D7FE5C253A0DA5008073C5 /* UIViewController+StoryboardIdentifiable.swift in Sources */,
 				F8D7FDF6253872A4008073C5 /* HTTPMethod.swift in Sources */,
 				F8D7FDFD25387339008073C5 /* TaxEndpointType.swift in Sources */,
+				F8D7FE66253B11A0008073C5 /* LoginUserResponse.swift in Sources */,
 				F8D7FE38253A0988008073C5 /* Storyboard.swift in Sources */,
 				F8D7FE52253A0B77008073C5 /* Coordinator.swift in Sources */,
 				F8D7FE4A253A0B10008073C5 /* StoryboardIdentifiable.swift in Sources */,
@@ -414,9 +456,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F837F136253B383500789C83 /* URLSessionMock.swift in Sources */,
 				F8D7FE292539D36A008073C5 /* NetworkManagerTest.swift in Sources */,
+				F837F13F253B385700789C83 /* NetworkManagerMock.swift in Sources */,
 				F8D7FE2125398B8D008073C5 /* EndPointTests.swift in Sources */,
-				F8D7FDC125386FE0008073C5 /* TaxTestClientTests.swift in Sources */,
+				F837F12B253B26AC00789C83 /* LoginControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,6 +45,8 @@ extension EndPointType {
         }
 
         var request = URLRequest(url: url)
+        request.httpMethod = httpMethod.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
         if let httpBody = httpBody {
             request.httpBody = httpBody

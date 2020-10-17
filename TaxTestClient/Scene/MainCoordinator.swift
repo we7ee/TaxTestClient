@@ -25,11 +25,16 @@ class MainCoordinator: Coordinator {
         navigateToLogin()
     }
 
-    func navigateToLogin() {
+    private func navigateToLogin() {
         let loginStoryBoard = UIStoryboard(storyboard: .login)
         let loginViewController: LoginViewController = loginStoryBoard.instantiateViewController()
-        loginViewController.modalPresentationStyle = .fullScreen
+        loginViewController.coordinator = self
 
-        navigationController.present(loginViewController, animated: false, completion: nil)
+
+        let loginController = LoginController()
+        loginViewController.loginController = loginController
+
+        navigationController.setNavigationBarHidden(true, animated: false)
+        navigationController.pushViewController(loginViewController, animated: false)
     }
 }

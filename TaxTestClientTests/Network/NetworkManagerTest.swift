@@ -20,7 +20,7 @@ class NetworkManagerTest: XCTestCase {
 
     func test_request_serverError() throws {
         // Given
-        let userLoginEndpoint = LoginUser(username: "name", password: "password")
+        let userLoginEndpoint = LoginUser(email: "email", password: "password")
 
         let error = URLSessionMock.MockError.anyError
 
@@ -39,7 +39,7 @@ class NetworkManagerTest: XCTestCase {
 
     func test_request_responseWithNoData() throws {
         // Given
-        let userLoginEndpoint = LoginUser(username: "name", password: "password")
+        let userLoginEndpoint = LoginUser(email: "email", password: "password")
         let url = userLoginEndpoint.makeRequest()!.url!
 
         let response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)
@@ -59,7 +59,7 @@ class NetworkManagerTest: XCTestCase {
 
     func test_request_responseWithData() throws {
         // Given
-        let userLoginEndpoint = LoginUser(username: "name", password: "password")
+        let userLoginEndpoint = LoginUser(email: "email", password: "password")
         let url = userLoginEndpoint.makeRequest()!.url!
 
         let response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)
@@ -90,7 +90,7 @@ class NetworkManagerTest: XCTestCase {
 
     func test_request_responseWithBadRequest() throws {
         // Given
-        let userLoginEndpoint = LoginUser(username: "name", password: "password")
+        let userLoginEndpoint = LoginUser(email: "email", password: "password")
         let url = userLoginEndpoint.makeRequest()!.url!
 
         let response = HTTPURLResponse(url: url, statusCode: 400, httpVersion: nil, headerFields: nil)
@@ -108,52 +108,4 @@ class NetworkManagerTest: XCTestCase {
         }
     }
 
-}
-
-class URLSessionMock: URLSession {
-    private var mockResponse: URLResponse?
-    private var mockError: Error?
-    private var mockData: Data?
-
-    enum MockError: Error {
-        case anyError
-    }
-
-    override init() {}
-
-    func mockDataTaskResponse(_ data: Data?, _ response: URLResponse?, _ error: Error?) {
-        self.mockData = data
-        self.mockResponse = response
-        self.mockError = error
-    }
-
-    override func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-        let dataTaskMock = URLSessionDataTaskMock(
-            mockData,
-            mockResponse,
-            mockError,
-            completionHandler: completionHandler
-        )
-
-        return dataTaskMock
-    }
-}
-
-class URLSessionDataTaskMock: URLSessionDataTask {
-    var mockResponse: URLResponse?
-    var mockError: Error?
-    var mockData: Data?
-
-    let handler: (Data?, URLResponse?, Error?) -> Void
-
-    init(_ data: Data?, _ response: URLResponse?, _ error: Error?, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        self.mockData = data
-        self.mockResponse = response
-        self.mockError = error
-        self.handler = completionHandler
-    }
-
-    override func resume() {
-        handler(mockData, mockResponse, mockError)
-    }
 }

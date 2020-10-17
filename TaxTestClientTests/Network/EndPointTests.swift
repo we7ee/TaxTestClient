@@ -16,7 +16,7 @@ class EndPointTests: XCTestCase {
 
     func test_makeRequest_LoginUser_urlIsCorrect() {
         // Given
-        let loginUser = LoginUser(username: "name", password: "password")
+        let loginUser = LoginUser(email: "name", password: "password")
 
         // When
         let request = loginUser.makeRequest()
@@ -29,8 +29,8 @@ class EndPointTests: XCTestCase {
         // Given
         let username = "name"
         let password = "password"
-        let loginUser = LoginUser(username: username, password: password)
-        let userLoginBody = LoginUserRequestBody(username: username, password: password)
+        let loginUser = LoginUser(email: username, password: password)
+        let userLoginBody = LoginUserRequestBody(email: username, password: password)
         let expectedBodyData = try! JSONEncoder().encode(userLoginBody)
 
         // When
@@ -38,5 +38,7 @@ class EndPointTests: XCTestCase {
 
         // Then
         XCTAssertEqual(request?.httpBody, expectedBodyData)
+        XCTAssertEqual(request?.httpMethod, "POST")
+        XCTAssertEqual(request?.allHTTPHeaderFields?["Content-Type"], "application/json")
     }
 }
