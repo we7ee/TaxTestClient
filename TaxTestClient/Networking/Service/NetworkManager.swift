@@ -7,8 +7,10 @@
 
 import Foundation
 
-protocol NetworkManaging {
+typealias NetworkResult<T: EndPointType> = (Result<T.Response, NetworkError>) -> Void
 
+protocol NetworkManaging {
+    func request<T: EndPointType>(for endpoint: T, completion: @escaping NetworkResult<T>)
 }
 
 enum NetworkError: Error {
@@ -22,8 +24,6 @@ enum NetworkResponseError: Error {
     case badRequest
     case failed
 }
-
-typealias NetworkResult<T: EndPointType> = (Result<T.Response, NetworkError>) -> ()
 
 class NetworkManager: NetworkManaging {
 
