@@ -55,7 +55,7 @@ class LoginController: LoginControlling {
     func login(with email: String?, and password: String?) {
 
         if isInputValid(email: email, password: password) == false {
-            state = .failed(.invalidInput(message: "Input wrong"))
+            state = .failed(.invalidInput(message: "Your input is not valid. Please enter valid email and password"))
             return
         }
 
@@ -75,9 +75,9 @@ class LoginController: LoginControlling {
                     if userResponse.error == "ok" {
                         self.state = .success(username: userResponse.userName ?? "-")
                     } else {
-                        self.state = .failed(.wrongEmailPassword(message: "Wrong email or password"))
+                        self.state = .failed(.wrongEmailPassword(message: "Wrong email or password. Please try again"))
                     }
-                case .failure(_):
+                case .failure:
                     self.state = .failed(.networkError(message: "A network error occured"))
             }
         }

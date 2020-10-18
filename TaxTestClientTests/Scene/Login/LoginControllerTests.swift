@@ -27,7 +27,7 @@ class LoginControllerTests: XCTestCase {
 
         sut.didReceiveState = { state in
             // Then
-            XCTAssertEqual(state, LoginState.failed(.invalidInput(message: "Input wrong")))
+            XCTAssertEqual(state, LoginState.failed(.invalidInput(message: "Your input is not valid. Please enter valid email and password")))
         }
 
         // When
@@ -49,7 +49,7 @@ class LoginControllerTests: XCTestCase {
 
         sut.didReceiveState = { state in
             // Then
-            XCTAssertEqual(state, LoginState.failed(.wrongEmailPassword(message: "Wrong email or password")))
+            XCTAssertEqual(state, LoginState.failed(.wrongEmailPassword(message: "Wrong email or password. Please try again")))
         }
 
         // When
@@ -75,26 +75,4 @@ class LoginControllerTests: XCTestCase {
     }
 
     // Add more test for all edge cases
-
-    func test_loginController_invalidUserNamePassword() throws {
-        // Setup
-        let networkManagerMock = NetworkManagerMock<LoginUserEndPoint>()
-        sut = LoginController(networkManager: networkManagerMock)
-
-        sut.didReceiveState = { state in
-            // Then
-            XCTAssertEqual(state, LoginState.failed(.invalidInput(message: "Input wrong")))
-        }
-
-        // When
-        sut.login(with: nil, and: nil)
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

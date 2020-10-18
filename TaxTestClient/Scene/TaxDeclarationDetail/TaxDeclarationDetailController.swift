@@ -50,7 +50,7 @@ class TaxDeclarationDetailController: TaxDeclarationDetailControlling {
 
             switch result {
                 case .failure:
-                self.state = .failed(.networkError(message: "An unexpted error occured"))
+                    self.state = .failed(.networkError(message: "An unexpted error occured"))
                 case .success(let openTaxDeclaration):
                     self.state = .success(openTaxDeclaration)
             }
