@@ -22,7 +22,7 @@ class LoginControllerTests: XCTestCase {
 
     func test_loginController_invalidInput() throws {
         // Setup
-        let networkManagerMock = NetworkManagerMock<LoginUser>()
+        let networkManagerMock = NetworkManagerMock<LoginUserEndPoint>()
         sut = LoginController(networkManager: networkManagerMock)
 
         sut.didReceiveState = { state in
@@ -40,7 +40,7 @@ class LoginControllerTests: XCTestCase {
 
     func test_loginController_wrongEmailPassword() throws {
         // Setup
-        let networkManagerMock = NetworkManagerMock<LoginUser>()
+        let networkManagerMock = NetworkManagerMock<LoginUserEndPoint>()
         sut = LoginController(networkManager: networkManagerMock)
 
         let loginUserResponse = LoginUserResponse(email: "email", userName: nil, userGlobalId: 0, error: "notvalid")
@@ -58,7 +58,7 @@ class LoginControllerTests: XCTestCase {
 
     func test_loginController_success() throws {
         // Setup
-        let networkManagerMock = NetworkManagerMock<LoginUser>()
+        let networkManagerMock = NetworkManagerMock<LoginUserEndPoint>()
         sut = LoginController(networkManager: networkManagerMock)
 
         let loginUserResponse = LoginUserResponse(email: "email", userName: "username", userGlobalId: 0, error: "ok")
@@ -67,7 +67,7 @@ class LoginControllerTests: XCTestCase {
 
         sut.didReceiveState = { state in
             // Then
-            XCTAssertEqual(state, .success(loginUserResponse))
+            XCTAssertEqual(state, .success(username: "username"))
         }
 
         // When
@@ -78,7 +78,7 @@ class LoginControllerTests: XCTestCase {
 
     func test_loginController_invalidUserNamePassword() throws {
         // Setup
-        let networkManagerMock = NetworkManagerMock<LoginUser>()
+        let networkManagerMock = NetworkManagerMock<LoginUserEndPoint>()
         sut = LoginController(networkManager: networkManagerMock)
 
         sut.didReceiveState = { state in

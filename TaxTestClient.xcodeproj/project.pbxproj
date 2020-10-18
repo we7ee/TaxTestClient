@@ -11,6 +11,23 @@
 		F837F12B253B26AC00789C83 /* LoginControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F12A253B26AC00789C83 /* LoginControllerTests.swift */; };
 		F837F136253B383500789C83 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F135253B383500789C83 /* URLSessionMock.swift */; };
 		F837F13F253B385700789C83 /* NetworkManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F13E253B385700789C83 /* NetworkManagerMock.swift */; };
+		F837F159253B583D00789C83 /* TaxDeclarationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F158253B583D00789C83 /* TaxDeclarationsResponse.swift */; };
+		F837F15E253B585A00789C83 /* TaxDeclarationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F15D253B585A00789C83 /* TaxDeclarationEndPoint.swift */; };
+		F837F164253C532900789C83 /* PersitenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F163253C532900789C83 /* PersitenceHelper.swift */; };
+		F837F169253C5C4B00789C83 /* LoadingIndicatorShowable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F168253C5C4B00789C83 /* LoadingIndicatorShowable.swift */; };
+		F837F172253C66E700789C83 /* TaxDeclarationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F171253C66E700789C83 /* TaxDeclarationViewController.swift */; };
+		F837F177253C671A00789C83 /* TaxDeclaration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F837F176253C671A00789C83 /* TaxDeclaration.storyboard */; };
+		F837F17C253C677500789C83 /* TaxDeclarationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F17B253C677500789C83 /* TaxDeclarationController.swift */; };
+		F837F181253C7A5100789C83 /* DateFormatter+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F180253C7A5100789C83 /* DateFormatter+API.swift */; };
+		F837F186253C7A6E00789C83 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F185253C7A6E00789C83 /* Date+String.swift */; };
+		F837F18C253C817800789C83 /* TaxDeclarationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F18B253C817800789C83 /* TaxDeclarationDetailViewController.swift */; };
+		F837F194253C818700789C83 /* TaxDeclarationDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F837F193253C818700789C83 /* TaxDeclarationDetail.storyboard */; };
+		F837F199253C819800789C83 /* TaxDeclarationDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F198253C819800789C83 /* TaxDeclarationDetailController.swift */; };
+		F837F19E253C820400789C83 /* TaxDeclarationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F19D253C820400789C83 /* TaxDeclarationResponse.swift */; };
+		F837F1A9253C838000789C83 /* OpenTaxDeclarationEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F1A8253C838000789C83 /* OpenTaxDeclarationEndPoint.swift */; };
+		F837F1AE253C912200789C83 /* TaxDeclarationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F1AD253C912200789C83 /* TaxDeclarationSection.swift */; };
+		F837F1B3253C915B00789C83 /* TaxDeclarationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F1B2253C915B00789C83 /* TaxDeclarationDataSource.swift */; };
+		F837F1BA253C928B00789C83 /* TaxDeclarationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F837F1B9253C928B00789C83 /* TaxDeclarationTests.swift */; };
 		F8D7FDAA25386FDE008073C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDA925386FDE008073C5 /* AppDelegate.swift */; };
 		F8D7FDAC25386FDE008073C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDAB25386FDE008073C5 /* SceneDelegate.swift */; };
 		F8D7FDAE25386FDE008073C5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDAD25386FDE008073C5 /* LoginViewController.swift */; };
@@ -21,7 +38,7 @@
 		F8D7FDEE25387182008073C5 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDED25387182008073C5 /* EndPointType.swift */; };
 		F8D7FDF6253872A4008073C5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDF5253872A4008073C5 /* HTTPMethod.swift */; };
 		F8D7FDFD25387339008073C5 /* TaxEndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FDFC25387339008073C5 /* TaxEndpointType.swift */; };
-		F8D7FE05253873E3008073C5 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE04253873E3008073C5 /* LoginUser.swift */; };
+		F8D7FE05253873E3008073C5 /* LoginUserEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE04253873E3008073C5 /* LoginUserEndPoint.swift */; };
 		F8D7FE1C253985AA008073C5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE1B253985AA008073C5 /* NetworkManager.swift */; };
 		F8D7FE2125398B8D008073C5 /* EndPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE2025398B8D008073C5 /* EndPointTests.swift */; };
 		F8D7FE292539D36A008073C5 /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D7FE282539D36A008073C5 /* NetworkManagerTest.swift */; };
@@ -57,6 +74,23 @@
 		F837F12A253B26AC00789C83 /* LoginControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerTests.swift; sourceTree = "<group>"; };
 		F837F135253B383500789C83 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		F837F13E253B385700789C83 /* NetworkManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerMock.swift; sourceTree = "<group>"; };
+		F837F158253B583D00789C83 /* TaxDeclarationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxDeclarationsResponse.swift; sourceTree = "<group>"; };
+		F837F15D253B585A00789C83 /* TaxDeclarationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxDeclarationEndPoint.swift; sourceTree = "<group>"; };
+		F837F163253C532900789C83 /* PersitenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersitenceHelper.swift; sourceTree = "<group>"; };
+		F837F168253C5C4B00789C83 /* LoadingIndicatorShowable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorShowable.swift; sourceTree = "<group>"; };
+		F837F171253C66E700789C83 /* TaxDeclarationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxDeclarationViewController.swift; sourceTree = "<group>"; };
+		F837F176253C671A00789C83 /* TaxDeclaration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaxDeclaration.storyboard; sourceTree = "<group>"; };
+		F837F17B253C677500789C83 /* TaxDeclarationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxDeclarationController.swift; sourceTree = "<group>"; };
+		F837F180253C7A5100789C83 /* DateFormatter+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+API.swift"; sourceTree = "<group>"; };
+		F837F185253C7A6E00789C83 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		F837F18B253C817800789C83 /* TaxDeclarationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxDeclarationDetailViewController.swift; sourceTree = "<group>"; };
+		F837F193253C818700789C83 /* TaxDeclarationDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TaxDeclarationDetail.storyboard; sourceTree = "<group>"; };
+		F837F198253C819800789C83 /* TaxDeclarationDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxDeclarationDetailController.swift; sourceTree = "<group>"; };
+		F837F19D253C820400789C83 /* TaxDeclarationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxDeclarationResponse.swift; sourceTree = "<group>"; };
+		F837F1A8253C838000789C83 /* OpenTaxDeclarationEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTaxDeclarationEndPoint.swift; sourceTree = "<group>"; };
+		F837F1AD253C912200789C83 /* TaxDeclarationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxDeclarationSection.swift; sourceTree = "<group>"; };
+		F837F1B2253C915B00789C83 /* TaxDeclarationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxDeclarationDataSource.swift; sourceTree = "<group>"; };
+		F837F1B9253C928B00789C83 /* TaxDeclarationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxDeclarationTests.swift; sourceTree = "<group>"; };
 		F8D7FDA625386FDE008073C5 /* TaxTestClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxTestClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D7FDA925386FDE008073C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8D7FDAB25386FDE008073C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +107,7 @@
 		F8D7FDED25387182008073C5 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		F8D7FDF5253872A4008073C5 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		F8D7FDFC25387339008073C5 /* TaxEndpointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxEndpointType.swift; sourceTree = "<group>"; };
-		F8D7FE04253873E3008073C5 /* LoginUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUser.swift; sourceTree = "<group>"; };
+		F8D7FE04253873E3008073C5 /* LoginUserEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserEndPoint.swift; sourceTree = "<group>"; };
 		F8D7FE1B253985AA008073C5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F8D7FE2025398B8D008073C5 /* EndPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTests.swift; sourceTree = "<group>"; };
 		F8D7FE282539D36A008073C5 /* NetworkManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
@@ -115,7 +149,8 @@
 		F837F132253B37F800789C83 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				F837F12A253B26AC00789C83 /* LoginControllerTests.swift */,
+				F837F1B8253C926D00789C83 /* TaxDeclaration */,
+				F837F1B7253C923200789C83 /* Login */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -136,6 +171,51 @@
 				F837F13E253B385700789C83 /* NetworkManagerMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		F837F162253C530D00789C83 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				F837F163253C532900789C83 /* PersitenceHelper.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		F837F170253C66B100789C83 /* TaxDeclaration */ = {
+			isa = PBXGroup;
+			children = (
+				F837F171253C66E700789C83 /* TaxDeclarationViewController.swift */,
+				F837F176253C671A00789C83 /* TaxDeclaration.storyboard */,
+				F837F17B253C677500789C83 /* TaxDeclarationController.swift */,
+				F837F1B2253C915B00789C83 /* TaxDeclarationDataSource.swift */,
+			);
+			path = TaxDeclaration;
+			sourceTree = "<group>";
+		};
+		F837F18A253C814500789C83 /* TaxDeclarationDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F837F18B253C817800789C83 /* TaxDeclarationDetailViewController.swift */,
+				F837F193253C818700789C83 /* TaxDeclarationDetail.storyboard */,
+				F837F198253C819800789C83 /* TaxDeclarationDetailController.swift */,
+			);
+			path = TaxDeclarationDetail;
+			sourceTree = "<group>";
+		};
+		F837F1B7253C923200789C83 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F837F12A253B26AC00789C83 /* LoginControllerTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F837F1B8253C926D00789C83 /* TaxDeclaration */ = {
+			isa = PBXGroup;
+			children = (
+				F837F1B9253C928B00789C83 /* TaxDeclarationTests.swift */,
+			);
+			path = TaxDeclaration;
 			sourceTree = "<group>";
 		};
 		F8D7FD9D25386FDE008073C5 = {
@@ -161,11 +241,11 @@
 		F8D7FDA825386FDE008073C5 /* TaxTestClient */ = {
 			isa = PBXGroup;
 			children = (
+				F837F162253C530D00789C83 /* Persistence */,
 				F8D7FE48253A0AF5008073C5 /* Protocol */,
 				F8D7FE3C253A09E0008073C5 /* Extension */,
 				F8D7FDE42538702C008073C5 /* Assets */,
 				F8D7FDE325387012008073C5 /* Scene */,
-				F8D7FDE22538700A008073C5 /* Controller */,
 				F8D7FDE125387000008073C5 /* Model */,
 				F8D7FDE025386FF8008073C5 /* Networking */,
 				F8D7FDDC25386FE7008073C5 /* Supporting Files */,
@@ -216,15 +296,11 @@
 			isa = PBXGroup;
 			children = (
 				F8D7FE65253B11A0008073C5 /* LoginUserResponse.swift */,
+				F837F158253B583D00789C83 /* TaxDeclarationsResponse.swift */,
+				F837F19D253C820400789C83 /* TaxDeclarationResponse.swift */,
+				F837F1AD253C912200789C83 /* TaxDeclarationSection.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		F8D7FDE22538700A008073C5 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		F8D7FDE325387012008073C5 /* Scene */ = {
@@ -232,6 +308,8 @@
 			children = (
 				F8D7FE37253A0988008073C5 /* Storyboard.swift */,
 				F8D7FE36253A08CB008073C5 /* Login */,
+				F837F170253C66B100789C83 /* TaxDeclaration */,
+				F837F18A253C814500789C83 /* TaxDeclarationDetail */,
 				F8D7FDB425386FE0008073C5 /* LaunchScreen.storyboard */,
 				F8D7FE56253A0C00008073C5 /* MainCoordinator.swift */,
 			);
@@ -268,7 +346,9 @@
 			isa = PBXGroup;
 			children = (
 				F8D7FDFC25387339008073C5 /* TaxEndpointType.swift */,
-				F8D7FE04253873E3008073C5 /* LoginUser.swift */,
+				F8D7FE04253873E3008073C5 /* LoginUserEndPoint.swift */,
+				F837F15D253B585A00789C83 /* TaxDeclarationEndPoint.swift */,
+				F837F1A8253C838000789C83 /* OpenTaxDeclarationEndPoint.swift */,
 			);
 			path = buhl;
 			sourceTree = "<group>";
@@ -289,6 +369,8 @@
 				F8D7FE3D253A0A06008073C5 /* UIStoryboard+Extension.swift */,
 				F8D7FE5B253A0DA5008073C5 /* UIViewController+StoryboardIdentifiable.swift */,
 				F837F125253B235D00789C83 /* UIViewController+Alert.swift */,
+				F837F180253C7A5100789C83 /* DateFormatter+API.swift */,
+				F837F185253C7A6E00789C83 /* Date+String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -298,6 +380,7 @@
 			children = (
 				F8D7FE49253A0B10008073C5 /* StoryboardIdentifiable.swift */,
 				F8D7FE51253A0B77008073C5 /* Coordinator.swift */,
+				F837F168253C5C4B00789C83 /* LoadingIndicatorShowable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -406,8 +489,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8D7FDB625386FE0008073C5 /* LaunchScreen.storyboard in Resources */,
+				F837F194253C818700789C83 /* TaxDeclarationDetail.storyboard in Resources */,
 				F8D7FDB325386FE0008073C5 /* Assets.xcassets in Resources */,
 				F8D7FDB125386FDE008073C5 /* Login.storyboard in Resources */,
+				F837F177253C671A00789C83 /* TaxDeclaration.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,19 +517,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8D7FE05253873E3008073C5 /* LoginUser.swift in Sources */,
+				F8D7FE05253873E3008073C5 /* LoginUserEndPoint.swift in Sources */,
+				F837F19E253C820400789C83 /* TaxDeclarationResponse.swift in Sources */,
+				F837F1B3253C915B00789C83 /* TaxDeclarationDataSource.swift in Sources */,
 				F8D7FDEE25387182008073C5 /* EndPointType.swift in Sources */,
+				F837F17C253C677500789C83 /* TaxDeclarationController.swift in Sources */,
+				F837F15E253B585A00789C83 /* TaxDeclarationEndPoint.swift in Sources */,
 				F8D7FDAE25386FDE008073C5 /* LoginViewController.swift in Sources */,
+				F837F1A9253C838000789C83 /* OpenTaxDeclarationEndPoint.swift in Sources */,
 				F837F126253B235D00789C83 /* UIViewController+Alert.swift in Sources */,
+				F837F199253C819800789C83 /* TaxDeclarationDetailController.swift in Sources */,
 				F8D7FDAA25386FDE008073C5 /* AppDelegate.swift in Sources */,
 				F8D7FE61253B0E5C008073C5 /* LoginController.swift in Sources */,
 				F8D7FE1C253985AA008073C5 /* NetworkManager.swift in Sources */,
 				F8D7FE5C253A0DA5008073C5 /* UIViewController+StoryboardIdentifiable.swift in Sources */,
+				F837F18C253C817800789C83 /* TaxDeclarationDetailViewController.swift in Sources */,
+				F837F1AE253C912200789C83 /* TaxDeclarationSection.swift in Sources */,
 				F8D7FDF6253872A4008073C5 /* HTTPMethod.swift in Sources */,
 				F8D7FDFD25387339008073C5 /* TaxEndpointType.swift in Sources */,
 				F8D7FE66253B11A0008073C5 /* LoginUserResponse.swift in Sources */,
+				F837F186253C7A6E00789C83 /* Date+String.swift in Sources */,
+				F837F169253C5C4B00789C83 /* LoadingIndicatorShowable.swift in Sources */,
+				F837F172253C66E700789C83 /* TaxDeclarationViewController.swift in Sources */,
+				F837F159253B583D00789C83 /* TaxDeclarationsResponse.swift in Sources */,
 				F8D7FE38253A0988008073C5 /* Storyboard.swift in Sources */,
+				F837F181253C7A5100789C83 /* DateFormatter+API.swift in Sources */,
 				F8D7FE52253A0B77008073C5 /* Coordinator.swift in Sources */,
+				F837F164253C532900789C83 /* PersitenceHelper.swift in Sources */,
 				F8D7FE4A253A0B10008073C5 /* StoryboardIdentifiable.swift in Sources */,
 				F8D7FE57253A0C00008073C5 /* MainCoordinator.swift in Sources */,
 				F8D7FE3E253A0A06008073C5 /* UIStoryboard+Extension.swift in Sources */,
@@ -458,6 +557,7 @@
 			files = (
 				F837F136253B383500789C83 /* URLSessionMock.swift in Sources */,
 				F8D7FE292539D36A008073C5 /* NetworkManagerTest.swift in Sources */,
+				F837F1BA253C928B00789C83 /* TaxDeclarationTests.swift in Sources */,
 				F837F13F253B385700789C83 /* NetworkManagerMock.swift in Sources */,
 				F8D7FE2125398B8D008073C5 /* EndPointTests.swift in Sources */,
 				F837F12B253B26AC00789C83 /* LoginControllerTests.swift in Sources */,

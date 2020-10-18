@@ -20,7 +20,7 @@ class NetworkManagerTest: XCTestCase {
 
     func test_request_serverError() throws {
         // Given
-        let userLoginEndpoint = LoginUser(email: "email", password: "password")
+        let userLoginEndpoint = LoginUserEndPoint(email: "email", password: "password")
 
         let error = URLSessionMock.MockError.anyError
 
@@ -39,7 +39,7 @@ class NetworkManagerTest: XCTestCase {
 
     func test_request_responseWithNoData() throws {
         // Given
-        let userLoginEndpoint = LoginUser(email: "email", password: "password")
+        let userLoginEndpoint = LoginUserEndPoint(email: "email", password: "password")
         let url = userLoginEndpoint.makeRequest()!.url!
 
         let response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)
@@ -59,7 +59,7 @@ class NetworkManagerTest: XCTestCase {
 
     func test_request_responseWithData() throws {
         // Given
-        let userLoginEndpoint = LoginUser(email: "email", password: "password")
+        let userLoginEndpoint = LoginUserEndPoint(email: "email", password: "password")
         let url = userLoginEndpoint.makeRequest()!.url!
 
         let response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)
@@ -90,7 +90,7 @@ class NetworkManagerTest: XCTestCase {
 
     func test_request_responseWithBadRequest() throws {
         // Given
-        let userLoginEndpoint = LoginUser(email: "email", password: "password")
+        let userLoginEndpoint = LoginUserEndPoint(email: "email", password: "password")
         let url = userLoginEndpoint.makeRequest()!.url!
 
         let response = HTTPURLResponse(url: url, statusCode: 400, httpVersion: nil, headerFields: nil)

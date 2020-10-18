@@ -21,7 +21,7 @@ enum LoginError: Equatable, Error {
 enum LoginState: Equatable {
     case idle
     case loading
-    case success(LoginUserResponse)
+    case success(username: String)
     case failed(LoginError)
 }
 
@@ -46,6 +46,7 @@ class LoginController: LoginControlling {
         self.state = .idle
     }
 
+    // Public API
 
     /// Perform login with email and password
     /// - Parameters:
@@ -62,14 +63,17 @@ class LoginController: LoginControlling {
             return
         }
 
-        let loginEndpoint = LoginUser(email: email, password: password)
+        let loginEndpoint = LoginUserEndPoint(email: email, password: password)
+
+        state = .loading
 
         networkManager.request(for: loginEndpoint) { [weak self] (result) in
             guard let self = self else { return }
+            
             switch result {
                 case .success(let userResponse):
                     if userResponse.error == "ok" {
-                        self.state = .success(userResponse)
+                        self.state = .success(username: userResponse.userName ?? "-")
                     } else {
                         self.state = .failed(.wrongEmailPassword(message: "Wrong email or password"))
                     }
@@ -78,6 +82,8 @@ class LoginController: LoginControlling {
             }
         }
     }
+
+    // Private API
 
     private func isInputValid(email: String?, password: String?) -> Bool {
         guard let email = email, let password = password else {

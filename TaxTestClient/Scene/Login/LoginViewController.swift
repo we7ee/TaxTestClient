@@ -7,7 +7,10 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, LoadingIndicatorShowable {
+
+    // LoadingIndicatorShowable
+    var loadingIndicator: UIView?
 
     // Public properties
     weak var coordinator: MainCoordinator?
@@ -30,15 +33,25 @@ class LoginViewController: UIViewController {
     private func handleState(_ state: LoginState) {
         switch state {
             case .idle:
-                print("Do nothing for now")
+                hideLoadingIndicator()
             case .loading:
-                #warning("TODO: Show loading indicator")
+                showLoadingIndicator()
             case .failed(let loginError):
+                hideLoadingIndicator()
                 handleLoginError(loginError)
-            case .success(let user):
-                showAlert(with: "Success", message: "\(user.userName ?? "") logged in successfully.")
+            case .success(let username):
+                hideLoadingIndicator()
+
+                let okAction = UIAlertAction(title: "Ok", style: .cancel) { [weak self] (action) in
+                    guard let self = self else { return }
+                    self.coordinator?.navigateToTaxDeclarations()
+                }
+
+                showAlert(with: "Success", message: "\(username) logged in successfully.", and: [okAction])
         }
     }
+
+    // MARK: - UI
 
     private func handleLoginError(_ loginError: LoginError) {
         let errorMessage: String
@@ -64,4 +77,3 @@ class LoginViewController: UIViewController {
         loginController?.login(with: email, and: password)
     }
 }
-

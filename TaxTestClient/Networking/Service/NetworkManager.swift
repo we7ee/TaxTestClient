@@ -35,8 +35,7 @@ class NetworkManager: NetworkManaging {
 
     func request<T: EndPointType>(for endpoint: T, completion: @escaping NetworkResult<T>) {
         guard let request = endpoint.makeRequest() else {
-            // return network error -> invalid endpoint
-            return
+            fatalError("Unable to create request")
         }
 
         let task = urlSession.dataTask(with: request) { (responseData, urlResponse, responseError) in
@@ -57,7 +56,12 @@ class NetworkManager: NetworkManaging {
                     }
 
                     do {
-                        let object = try JSONDecoder().decode(T.Response.self, from: data)
+                        let jsonDecoder = JSONDecoder()
+                        jsonDecoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601WihtoutTimeZone)
+                        let object = try jsonDecoder.decode(T.Response.self, from: data)
+
+                        self.saveUserSession(response)
+
                         completion(.success(object))
                     } catch let decodingError {
                         print("An error occured while decoding response: \(decodingError)")
@@ -85,6 +89,15 @@ class NetworkManager: NetworkManaging {
             case 401...403: return .authenticationError
             default: return .failed
         }
+    }
+
+    private func saveUserSession(_ response: URLResponse) {
+        guard let httpUrlResponse = response as? HTTPURLResponse,
+              let restState = httpUrlResponse.allHeaderFields["restState"] as? String else {
+            return
+        }
+
+        PersitenceHelper.restState = restState
     }
 }
 

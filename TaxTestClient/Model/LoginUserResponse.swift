@@ -7,9 +7,11 @@
 
 import Foundation
 
-struct LoginUserResponse: Equatable, Codable {
+struct LoginUserResponse: Codable {
     let email: String
     let userName: String?
     let userGlobalId: Int
     let error: String
 }
+
+extension LoginUserResponse: Equatable {}

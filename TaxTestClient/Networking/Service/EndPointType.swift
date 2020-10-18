@@ -30,6 +30,9 @@ extension EndPointType {
         components.path = "\(baseURL.path)/\(path)"
 
         if let parameters = urlParameters {
+
+            components.queryItems = [URLQueryItem]()
+
             for (key, value) in parameters {
                 let query = URLQueryItem(
                     name: key,
@@ -47,6 +50,10 @@ extension EndPointType {
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        if let restState = PersitenceHelper.restState {
+            request.setValue(restState, forHTTPHeaderField: "restState")
+        }
 
         if let httpBody = httpBody {
             request.httpBody = httpBody

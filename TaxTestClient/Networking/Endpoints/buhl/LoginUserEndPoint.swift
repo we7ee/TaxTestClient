@@ -1,5 +1,5 @@
 //
-//  LoginUser.swift
+//  LoginUserEndPoint.swift
 //  TaxTestClient
 //
 //  Created by Willy Breitenbach on 15.10.20.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LoginUser: TaxEndpointType {
+struct LoginUserEndPoint: TaxEndpointType {
     typealias Response = LoginUserResponse
 
     private let requestBody: LoginUserRequestBody

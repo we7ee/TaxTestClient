@@ -16,7 +16,7 @@ class EndPointTests: XCTestCase {
 
     func test_makeRequest_LoginUser_urlIsCorrect() {
         // Given
-        let loginUser = LoginUser(email: "name", password: "password")
+        let loginUser = LoginUserEndPoint(email: "name", password: "password")
 
         // When
         let request = loginUser.makeRequest()
@@ -29,7 +29,7 @@ class EndPointTests: XCTestCase {
         // Given
         let username = "name"
         let password = "password"
-        let loginUser = LoginUser(email: username, password: password)
+        let loginUser = LoginUserEndPoint(email: username, password: password)
         let userLoginBody = LoginUserRequestBody(email: username, password: password)
         let expectedBodyData = try! JSONEncoder().encode(userLoginBody)
 
@@ -40,5 +40,21 @@ class EndPointTests: XCTestCase {
         XCTAssertEqual(request?.httpBody, expectedBodyData)
         XCTAssertEqual(request?.httpMethod, "POST")
         XCTAssertEqual(request?.allHTTPHeaderFields?["Content-Type"], "application/json")
+    }
+
+    func test_makeRequest_urlEndcoding_isWorkingCorrectly() {
+        // Given
+        let id = 1
+
+        let openTaxDeclarationEndPoint = OpenTaxDeclarationEndPoint(taxDeclaration: id)
+
+        let exptectedURL = baseURL + "/openTaxDeclaration?id=1"
+
+        // When
+        let request = openTaxDeclarationEndPoint.makeRequest()
+
+        // Then
+
+        XCTAssertEqual(request?.url?.absoluteString, exptectedURL)
     }
 }
